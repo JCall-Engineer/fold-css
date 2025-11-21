@@ -4,6 +4,7 @@ const vscode = require('vscode');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+	const config = vscode.workspace.getConfiguration('fold-css');
 	const DEBUG = config.get('debug') || false;
 	const output = DEBUG ? vscode.window.createOutputChannel("Fold CSS") : null;
 
