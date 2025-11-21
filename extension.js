@@ -31,7 +31,9 @@ function activate(context) {
 
 						if (!inComment) {
 							if (line[j] === '{') {
-								stack.push(i);
+								const beforeBrace = line.slice(0, j).trim();
+								const startLine = beforeBrace.length === 0 && i > 0 ? i - 1 : i;
+								stack.push(startLine);
 							} else if (line[j] === '}' && stack.length > 0) {
 								const start = stack.pop();
 								if (i > start) {

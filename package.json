@@ -5,7 +5,7 @@
   "publisher": "jcall-engineer",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JCall-Engineer/fold-css.git"
+    "url": "https://github.com/JCall-Engineer/fold-css.git"
   },
   "version": "1.0.0",
   "engines": {
