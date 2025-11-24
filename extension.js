@@ -55,7 +55,8 @@ function activate(context) {
 					}
 				}
 
-				if (DEBUG && output) output.appendLine(`Returning ranges: ${JSON.stringify(ranges.map(r => ({start: r.start, end: r.end})))}`);
+				ranges.sort((a, b) => a.start - b.start);
+				if (DEBUG && output) output.appendLine(`Returning ranges: ${JSON.stringify(ranges.map(r => ({start: r.start + 1, end: r.end + 1})))}`);
 				return ranges;
 			}
 		}
